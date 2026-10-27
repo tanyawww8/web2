@@ -1,0 +1,191 @@
+/* Базовые сбросы стилей */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4; /* Легкий фон для контраста с белыми блоками */
+}
+
+/* Общий контейнер для центрирования контента (макс. ширина 960px) */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- ШАПКА (header) --- */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    /* Шапка тянется на всю ширину окна */
+    width: 100%; 
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Выравнивание по нижнему краю, как на макете */
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- МЕНЮ (nav) --- */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    display: inline-block;
+}
+
+.main-nav a:hover {
+    background-color: #ccc;
+}
+
+/* --- ОСНОВНОЙ КОНТЕНТ (main) --- */
+.main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Синие блоки на макете (список, таблица, форма) */
+.content-block {
+    background-color: #8ba6d1; /* Цвет из макета */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.content-block h2 {
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* --- СТИЛИЗАЦИЯ ТАБЛИЦЫ --- */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Убираем двойные рамки */
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #5a7dbb; /* Темнее основного цвета блока */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Фон четных и нечетных строк различается (зебра) */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e5e5e5;
+}
+
+/* --- ПОДВАЛ (footer) --- */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    /* Подвал тянется на всю ширину окна */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- Стили для содержимого из Задания 1 (ссылки и форма) --- */
+.links-list li {
+    margin-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон для читаемости на синем */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.links-list a {
+    color: #0044cc;
+}
+
+#form-section form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#form-section form p {
+    margin-bottom: 10px;
+}
+
+#form-section input[type="text"],
+#form-section input[type="tel"],
+#form-section input[type="email"],
+#form-section input[type="date"],
+#form-section select,
+#form-section textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    margin-top: 3px;
+}
+
+#form-section textarea {
+    max-width: 100%;
+    resize: vertical;
+}
+
+#form-section button {
+    padding: 8px 15px;
+    background-color: #5a7dbb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#form-section button:hover {
+    background-color: #3b5998;
+}
